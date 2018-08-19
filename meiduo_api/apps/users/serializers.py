@@ -40,7 +40,7 @@ class UserCreateSerializer(serializers.Serializer):
     # 验证
     def validate_username(self,value):
         count = User.objects.filter(username=value).count()
-        if  count>0:
+        if count>0:
             raise serializers.ValidationError('用户名已存在')
         return value
 
@@ -52,15 +52,18 @@ class UserCreateSerializer(serializers.Serializer):
         count = User.objects.filter(mobile=value).count()
         if count>0:
             raise serializers.ValidationError('手机号已被注册')
+        return value
 
     def validate_sms_code(self,value):
         # 验证验证码
         if not re.match(r'^\d{6}$',value):
             raise serializers.ValidationError('验证码格式不正确')
+        return value
 
     def validate_allow(self,value):
         if not value:
             raise serializers.ValidationError('请同意协议')
+        return value
 
     # 验证多个属性
     def validate(self, attrs):
@@ -86,19 +89,19 @@ class UserCreateSerializer(serializers.Serializer):
         # 将redis中保存的验证码与request中的验证码进行匹配
         if sms_code_redis.decode() != sms_code_reques:
             raise serializers.ValidationError('验证码不正确')
-
+        return attrs
     #     将用户信息添加到数据库
-        def create(self,valiate_data):
-            # valiate是验证过的数据
-            # 创建对象
-            user = User()
-            # 获取用户名
-            user.username = valiate_data.get('username')
-            # 将密码加密
-            user.set_password(valiate_data.get('password'))
-            # 获取手机号
-            user.mobile = valiate_data.get('mobile')
-            # 将获取到的内容添加到数据库
-            user.save()
-            # 返回数据
-            return user
+    def create(self, validated_data):
+        # valiate是验证过的数据
+        # 创建对象
+        user = User()
+        # 获取用户名
+        user.username = validated_data.get('username')
+        # 将密码加密
+        user.set_password(validated_data.get('password'))
+        # 获取手机号
+        user.mobile = validated_data.get('mobile')
+        # 将获取到的内容添加到数据库
+        user.save()
+        # 返回数据
+        return user

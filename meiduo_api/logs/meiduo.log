@@ -48,3 +48,326 @@ WARNING 2018-08-19 15:18:36,893 base 152 Not Found: /
 WARNING 2018-08-19 15:18:36,894 basehttp 124 "GET / HTTP/1.1" 404 2110
 WARNING 2018-08-19 15:18:36,940 base 152 Not Found: /favicon.ico
 WARNING 2018-08-19 15:18:36,944 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2161
+WARNING 2018-08-19 17:29:54,251 base 152 Not Found: /
+WARNING 2018-08-19 17:29:54,261 basehttp 124 "GET / HTTP/1.1" 404 2104
+WARNING 2018-08-19 17:29:54,476 base 152 Not Found: /favicon.ico
+WARNING 2018-08-19 17:29:54,477 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2155
+WARNING 2018-08-19 17:30:10,363 base 152 Not Found: /usernames/uchida/count/
+WARNING 2018-08-19 17:30:10,368 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 404 2197
+WARNING 2018-08-19 17:30:26,742 base 152 Not Found: /mobiles/13123456789/count/
+WARNING 2018-08-19 17:30:26,744 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 404 2206
+WARNING 2018-08-19 17:30:27,202 base 152 Not Found: /mobiles/13123456789/count/
+WARNING 2018-08-19 17:30:27,206 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 404 2206
+INFO 2018-08-19 17:30:27,299 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+WARNING 2018-08-19 17:30:42,192 base 152 Not Found: /mobiles/13123456789/count/
+WARNING 2018-08-19 17:30:42,192 base 152 Not Found: /usernames/uchida/count/
+WARNING 2018-08-19 17:30:42,193 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 404 2197
+WARNING 2018-08-19 17:30:42,196 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 404 2206
+INFO 2018-08-19 17:30:42,197 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2018-08-19 17:30:42,203 base 152 Not Found: /users/
+WARNING 2018-08-19 17:30:42,204 basehttp 124 "POST /users/ HTTP/1.1" 404 2147
+WARNING 2018-08-19 17:32:23,732 base 152 Not Found: /users/
+ERROR 2018-08-19 17:32:23,736 exception 135 Internal Server Error: /usernames/uchida/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/views.py", line 12, in get
+    count = User.objects.filter(user_name = username).count()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/db/models/query.py", line 781, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/db/models/query.py", line 799, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1260, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1286, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1044, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1362, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_name' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, mobile, password, user_permissions, username
+WARNING 2018-08-19 17:32:23,738 basehttp 124 "POST /users/ HTTP/1.1" 404 2536
+ERROR 2018-08-19 17:32:23,765 exceptions 25 [<users.views.MobileCountView object at 0x7f8a4a46dbe0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:32:23,766 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:32:23,854 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 500 19416
+ERROR 2018-08-19 17:32:27,721 exceptions 25 [<users.views.MobileCountView object at 0x7f8a4a46da58>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:32:27,731 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:32:47,411 exceptions 25 [<users.views.MobileCountView object at 0x7f5570eb55c0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:32:47,413 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+WARNING 2018-08-19 17:32:47,513 base 152 Not Found: /users/
+ERROR 2018-08-19 17:32:47,519 exceptions 25 [<users.views.MobileCountView object at 0x7f5572ad7898>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:32:47,520 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:32:47,521 exceptions 25 [<users.views.UsernameCountView object at 0x7f5570578198>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:32:47,521 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+WARNING 2018-08-19 17:32:47,523 basehttp 124 "POST /users/ HTTP/1.1" 404 2536
+ERROR 2018-08-19 17:33:10,157 exceptions 25 [<users.views.MobileCountView object at 0x7f5570588a90>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:33:10,159 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:33:10,216 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+WARNING 2018-08-19 17:33:33,817 base 152 Not Found: /users/
+WARNING 2018-08-19 17:33:33,823 basehttp 124 "POST /users/ HTTP/1.1" 404 2536
+ERROR 2018-08-19 17:33:33,823 exceptions 25 [<users.views.UsernameCountView object at 0x7f5570212320>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:33:33,824 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:33:33,826 exceptions 25 [<users.views.MobileCountView object at 0x7f5570217160>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:33:33,827 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+WARNING 2018-08-19 17:33:38,020 base 152 Not Found: /users/
+WARNING 2018-08-19 17:33:38,022 basehttp 124 "POST /users/ HTTP/1.1" 404 2536
+ERROR 2018-08-19 17:33:38,036 exceptions 25 [<users.views.UsernameCountView object at 0x7f557021f6d8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:33:38,039 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:33:38,044 exceptions 25 [<users.views.MobileCountView object at 0x7f557022a5f8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:33:38,048 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+WARNING 2018-08-19 17:33:38,618 base 152 Not Found: /users/
+ERROR 2018-08-19 17:33:38,623 exceptions 25 [<users.views.UsernameCountView object at 0x7f557025eeb8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:33:38,624 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:33:38,626 exceptions 25 [<users.views.MobileCountView object at 0x7f5570217898>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:33:38,626 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+WARNING 2018-08-19 17:33:38,628 basehttp 124 "POST /users/ HTTP/1.1" 404 2536
+ERROR 2018-08-19 17:33:40,676 exceptions 25 [<users.views.UsernameCountView object at 0x7f5570224080>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:33:40,679 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+WARNING 2018-08-19 17:33:56,404 base 152 Not Found: /users
+WARNING 2018-08-19 17:33:56,416 basehttp 124 "GET /users HTTP/1.1" 404 2526
+WARNING 2018-08-19 17:34:00,449 base 152 Not Found: /user
+WARNING 2018-08-19 17:34:00,450 basehttp 124 "GET /user HTTP/1.1" 404 2523
+ERROR 2018-08-19 17:34:59,028 exceptions 25 [<users.views.UsernameCountView object at 0x7f5570eb53c8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:34:59,030 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:35:08,223 exceptions 25 [<users.views.MobileCountView object at 0x7f55705cdf60>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:35:08,225 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:35:10,189 exceptions 25 [<users.views.MobileCountView object at 0x7f5570224978>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:35:10,192 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:35:10,203 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+WARNING 2018-08-19 17:35:29,762 base 152 Not Found: /users/
+ERROR 2018-08-19 17:35:29,763 exceptions 25 [<users.views.UsernameCountView object at 0x7f5570212e10>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:35:29,765 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:35:29,767 exceptions 25 [<users.views.MobileCountView object at 0x7f557058f518>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:35:29,767 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+WARNING 2018-08-19 17:35:29,770 basehttp 124 "POST /users/ HTTP/1.1" 404 2536
+WARNING 2018-08-19 17:35:31,761 base 152 Not Found: /users/
+WARNING 2018-08-19 17:35:31,768 basehttp 124 "POST /users/ HTTP/1.1" 404 2536
+ERROR 2018-08-19 17:35:31,770 exceptions 25 [<users.views.MobileCountView object at 0x7f5570232e80>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:35:31,772 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:35:31,773 exceptions 25 [<users.views.UsernameCountView object at 0x7f557021bef0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:35:31,774 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:37:37,098 exceptions 25 [<users.views.UsernameCountView object at 0x7f55702348d0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:37:37,104 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:37:49,437 exceptions 25 [<users.views.MobileCountView object at 0x7f557021b278>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:37:49,440 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:37:50,183 exceptions 25 [<users.views.MobileCountView object at 0x7f557023d198>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:37:50,186 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:37:50,187 basehttp 124 "GET /sms_code/13123456788/ HTTP/1.1" 200 16
+WARNING 2018-08-19 17:37:54,000 basehttp 124 "GET /sms_code/13123456788/ HTTP/1.1" 400 37
+ERROR 2018-08-19 17:37:54,006 exceptions 25 [<users.views.MobileCountView object at 0x7f5570234780>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:37:54,008 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:19,771 exceptions 25 [<users.views.UsernameCountView object at 0x7f5570280f60>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:19,773 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:38:19,774 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2018-08-19 17:38:19,778 exceptions 25 [<users.views.MobileCountView object at 0x7f55702417b8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:19,779 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:38:36,824 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2018-08-19 17:38:36,841 exceptions 25 [<users.views.UsernameCountView object at 0x7f55702344e0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:36,845 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:36,852 exceptions 25 [<users.views.MobileCountView object at 0x7f5570241e80>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:36,856 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:37,773 exceptions 25 [<users.views.UsernameCountView object at 0x7f5570244d30>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+INFO 2018-08-19 17:38:37,776 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2018-08-19 17:38:37,780 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:37,781 exceptions 25 [<users.views.MobileCountView object at 0x7f5570238da0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:37,787 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:38,425 exceptions 25 [<users.views.UsernameCountView object at 0x7f557023dcc0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:38,430 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:38:38,432 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2018-08-19 17:38:38,434 exceptions 25 [<users.views.MobileCountView object at 0x7f5570241e48>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:38,436 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:38,627 exceptions 25 [<users.views.UsernameCountView object at 0x7f5570234240>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:38,631 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:38:38,634 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2018-08-19 17:38:38,635 exceptions 25 [<users.views.MobileCountView object at 0x7f5570244208>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:38,639 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:38,809 exceptions 25 [<users.views.UsernameCountView object at 0x7f55701cd940>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:38,812 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:38:38,813 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2018-08-19 17:38:38,819 exceptions 25 [<users.views.MobileCountView object at 0x7f55702447b8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:38,820 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:38:46,161 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2018-08-19 17:38:46,181 exceptions 25 [<users.views.UsernameCountView object at 0x7f557023d390>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:46,188 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:46,198 exceptions 25 [<users.views.MobileCountView object at 0x7f5570241ac8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:46,200 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:38:59,332 exceptions 25 [<users.views.MobileCountView object at 0x7f557021b3c8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:38:59,427 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 5265
+INFO 2018-08-19 17:38:59,446 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-08-19 17:38:59,451 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-08-19 17:38:59,460 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-08-19 17:38:59,476 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-08-19 17:38:59,487 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-08-19 17:38:59,488 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-08-19 17:38:59,496 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-08-19 17:38:59,505 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-08-19 17:38:59,516 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-08-19 17:38:59,520 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-08-19 17:38:59,538 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2018-08-19 17:38:59,795 base 152 Not Found: /favicon.ico
+WARNING 2018-08-19 17:38:59,796 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2550
+INFO 2018-08-19 17:39:09,709 basehttp 124 "OPTIONS /mobiles/13123456788/count/ HTTP/1.1" 200 5550
+INFO 2018-08-19 17:41:15,504 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2018-08-19 17:41:15,612 exceptions 25 [<users.views.UsernameCountView object at 0x7f507a2ba278>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:41:15,613 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:41:15,616 exceptions 25 [<users.views.MobileCountView object at 0x7f50787b37f0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:41:15,617 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:42:39,420 exceptions 25 [<users.views.MobileCountView object at 0x7f4d024e5588>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:42:39,426 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:42:39,545 basehttp 124 "GET /sms_code/13123456788/ HTTP/1.1" 200 16
+WARNING 2018-08-19 17:42:46,298 basehttp 124 "GET /sms_code/13123456788/ HTTP/1.1" 400 37
+ERROR 2018-08-19 17:42:46,310 exceptions 25 [<users.views.MobileCountView object at 0x7f4d021205c0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:42:46,317 basehttp 124 "GET /mobiles/13123456788/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:43:07,590 exceptions 25 [<users.views.MobileCountView object at 0x7f4d0212a630>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:43:07,606 basehttp 124 "GET /mobiles/13123456786/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:43:07,693 exceptions 25 [<users.views.MobileCountView object at 0x7f4d02120ba8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:43:07,697 basehttp 124 "GET /mobiles/13123456786/count/ HTTP/1.1" 507 35
+INFO 2018-08-19 17:43:07,710 basehttp 124 "GET /sms_code/13123456786/ HTTP/1.1" 200 16
+ERROR 2018-08-19 17:43:15,558 exceptions 25 [<users.views.MobileCountView object at 0x7f4d021317b8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:43:15,568 basehttp 124 "GET /mobiles/13123456786/count/ HTTP/1.1" 507 35
+WARNING 2018-08-19 17:43:33,627 base 152 Not Found: /mobiles/
+WARNING 2018-08-19 17:43:33,635 basehttp 124 "GET /mobiles/ HTTP/1.1" 404 2697
+ERROR 2018-08-19 17:43:44,069 exceptions 25 [<users.views.UsernameCountView object at 0x7f4d0212a160>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:43:44,073 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:43:55,435 exceptions 25 [<users.views.MobileCountView object at 0x7f4d02193f28>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:43:55,450 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:44:02,544 exceptions 25 [<users.views.UsernameCountView object at 0x7f4d02193a58>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:44:02,620 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 507 5261
+ERROR 2018-08-19 17:44:11,915 exceptions 25 [<users.views.UsernameCountView object at 0x7f4d02159400>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:44:11,925 basehttp 124 "GET /usernames/houjie123/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:45:31,981 exceptions 25 [<users.views.MobileCountView object at 0x7f4d0215b8d0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:45:31,990 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:47:27,311 exceptions 25 [<users.views.UsernameCountView object at 0x7f631e8a01d0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:47:27,312 basehttp 124 "GET /usernames/houjie123/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:47:28,359 exceptions 25 [<users.views.UsernameCountView object at 0x7f631df622e8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:47:28,359 basehttp 124 "GET /usernames/houjie123/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:48:36,815 exceptions 25 [<users.views.UsernameCountView object at 0x7f79b63cfdd8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:48:36,825 basehttp 124 "GET /usernames/houjie123/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:48:41,496 exceptions 25 [<users.views.UsernameCountView object at 0x7f79b6301278>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:48:41,508 basehttp 124 "GET /usernames/houjie123/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:48:50,659 exceptions 25 [<users.views.UsernameCountView object at 0x7f79b6301a58>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:48:50,677 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:51:18,861 exceptions 25 [<users.views.UsernameCountView object at 0x7f71899f7198>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:51:18,871 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:51:22,404 exceptions 25 [<users.views.UsernameCountView object at 0x7f71890b6320>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 17:51:22,419 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 17:59:53,750 exception 135 Internal Server Error: /usernames/qwerty/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-08-19 17:59:53,844 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 500 87392
+ERROR 2018-08-19 17:59:56,340 exception 135 Internal Server Error: /usernames/qwerty/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-08-19 17:59:56,451 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 500 87392
+ERROR 2018-08-19 18:01:58,034 exceptions 25 [<users.views.UsernameCountView object at 0x7f4114cecda0>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-19 18:01:58,036 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 507 35
+ERROR 2018-08-19 18:20:37,848 exception 135 Internal Server Error: /usernames/qwerty/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-08-19 18:20:37,944 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 500 87392
+INFO 2018-08-19 18:22:03,980 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:22:04,735 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:22:12,090 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:22:25,545 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:22:26,748 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:22:26,826 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+INFO 2018-08-19 18:22:50,689 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:22:50,694 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:23:04,611 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:23:04,621 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:23:14,449 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:23:14,461 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:23:14,463 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2018-08-19 18:23:14,500 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2018-08-19 18:23:39,096 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-19 18:23:39,122 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:23:39,125 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+WARNING 2018-08-19 18:23:39,158 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2018-08-19 18:23:48,577 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:23:48,588 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+INFO 2018-08-19 18:24:06,935 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-19 18:24:06,952 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:24:06,956 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+WARNING 2018-08-19 18:24:06,981 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2018-08-19 18:28:15,548 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:28:15,561 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+INFO 2018-08-19 18:28:17,480 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-19 18:28:17,486 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:28:17,507 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+WARNING 2018-08-19 18:28:17,532 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2018-08-19 18:28:40,076 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:28:40,079 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-19 18:28:40,098 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+WARNING 2018-08-19 18:28:40,127 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2018-08-19 18:31:16,099 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:31:16,221 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+INFO 2018-08-19 18:31:37,090 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-19 18:31:37,117 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:31:37,121 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+WARNING 2018-08-19 18:31:37,163 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2018-08-19 18:32:47,403 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:32:47,471 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+INFO 2018-08-19 18:33:04,240 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-19 18:33:04,250 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
+INFO 2018-08-19 18:33:04,268 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
+INFO 2018-08-19 18:33:04,358 basehttp 124 "POST /users/ HTTP/1.1" 201 51

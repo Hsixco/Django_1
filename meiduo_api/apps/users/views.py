@@ -9,8 +9,8 @@ from .serializers import UserCreateSerializer
 
 class UsernameCountView(APIView):
     def get(self,request,username):
-        count = User.objects.filter(user_name = username).count()
-        Response({
+        count = User.objects.filter(username=username).count()
+        return Response({
             'user_name':username,
             'count':count
         })
@@ -19,11 +19,12 @@ class UsernameCountView(APIView):
 class MobileCountView(APIView):
     def get(self,request,mobile):
         count = User.objects.filter(mobile = mobile).count()
-        Response({
+        return Response({
             'mobile':mobile,
             'count':count
         })
 
-class UserCreateView(CreateAPIView):
+
+class UserView(CreateAPIView):
     # 完成用户的注册
     serializer_class = UserCreateSerializer
