@@ -1,0 +1,34 @@
+ERROR 2018-08-18 10:06:19,015 exception 80 Invalid HTTP_HOST header: 'api.meiduo.site:8000'. You may need to add 'api.meiduo.site' to ALLOWED_HOSTS.
+ERROR 2018-08-18 10:06:19,016 exception 80 Invalid HTTP_HOST header: 'api.meiduo.site:8000'. You may need to add 'api.meiduo.site' to ALLOWED_HOSTS.
+ERROR 2018-08-18 10:06:19,016 exception 80 Invalid HTTP_HOST header: 'api.meiduo.site:8000'. You may need to add 'api.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2018-08-18 10:06:19,162 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 400 70445
+WARNING 2018-08-18 10:06:19,168 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 400 69695
+WARNING 2018-08-18 10:06:19,172 basehttp 124 "GET /categories/157/ HTTP/1.1" 400 69498
+INFO 2018-08-18 10:10:20,083 basehttp 124 "GET / HTTP/1.1" 200 1714
+ERROR 2018-08-18 10:13:27,541 exception 80 Invalid HTTP_HOST header: 'api.meiduo.site:8000'. You may need to add 'api.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2018-08-18 10:13:27,595 basehttp 124 "GET / HTTP/1.1" 400 69973
+INFO 2018-08-18 10:15:16,467 basehttp 124 "GET / HTTP/1.1" 200 1714
+INFO 2018-08-18 10:18:20,433 basehttp 124 "GET / HTTP/1.1" 200 1714
+ERROR 2018-08-18 10:20:47,028 exception 80 Invalid HTTP_HOST header: 'www.meiduo.site:8000'. You may need to add 'www.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2018-08-18 10:20:47,104 basehttp 124 "GET / HTTP/1.1" 400 69249
+WARNING 2018-08-18 12:04:30,427 base 152 Not Found: /mobiles/13123456789/count/
+WARNING 2018-08-18 12:04:30,431 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 404 2207
+WARNING 2018-08-18 12:04:46,808 base 152 Not Found: /mobiles/13123456789/count/
+WARNING 2018-08-18 12:04:46,812 base 152 Not Found: /sms_code/13123456789/
+WARNING 2018-08-18 12:04:46,813 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 404 2207
+WARNING 2018-08-18 12:04:46,814 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 404 2186
+WARNING 2018-08-18 12:05:18,701 base 152 Not Found: /mobiles/13123456789/count/
+WARNING 2018-08-18 12:05:18,709 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 404 2206
+INFO 2018-08-18 12:05:18,706 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+WARNING 2018-08-18 12:05:46,551 base 152 Not Found: /mobiles/13123456782/count/
+WARNING 2018-08-18 12:05:46,555 basehttp 124 "GET /mobiles/13123456782/count/ HTTP/1.1" 404 2206
+WARNING 2018-08-18 12:05:53,309 base 152 Not Found: /mobiles/13123456781/count/
+WARNING 2018-08-18 12:05:53,309 basehttp 124 "GET /mobiles/13123456781/count/ HTTP/1.1" 404 2206
+WARNING 2018-08-18 12:05:56,951 base 152 Not Found: /mobiles/13123456781/count/
+WARNING 2018-08-18 12:05:56,952 basehttp 124 "GET /mobiles/13123456781/count/ HTTP/1.1" 404 2206
+INFO 2018-08-18 12:05:56,965 basehttp 124 "GET /sms_code/13123456781/ HTTP/1.1" 200 16
+WARNING 2018-08-18 12:10:50,440 base 152 Not Found: /mobiles/13123456789/count/
+WARNING 2018-08-18 12:10:50,441 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 404 2206
+INFO 2018-08-18 12:10:52,726 basehttp 124 "GET /sms_code/13123456789/ HTTP/1.1" 200 16
+WARNING 2018-08-18 12:10:52,736 base 152 Not Found: /mobiles/13123456789/count/
+WARNING 2018-08-18 12:10:52,736 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 404 2206
