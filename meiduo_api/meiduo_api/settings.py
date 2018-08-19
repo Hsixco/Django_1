@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'meiduo_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'meiduo8',
+        'NAME': 'meiduo_demo',
         'HOST': 'localhost',
         'PORT': 3306,
-        'USER': 'meiduo_user8',
+        'USER': 'meiduo',
         'PASSWORD': 'meiduo'
     }
 }

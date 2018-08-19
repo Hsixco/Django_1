@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework import serializers
 from django_redis import get_redis_connection
 import random
+from celery_tasks.sms.tasks import sms_send
 from utils.ytx_sdk.sendSMS import CCP
 
 
@@ -39,6 +40,7 @@ class SMSCodeView(APIView):
 
         # 发送短信
         # CCP.sendTemplateSMS(mobile,sms_code,5,1)
-        print(sms_code)
+        # print(sms_code)
+        sms_send.delay(mobile,sms_code,5,1)
 
         return Response({'message': 'OK'})
