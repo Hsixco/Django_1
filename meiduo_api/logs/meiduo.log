@@ -371,3 +371,100 @@ INFO 2018-08-19 18:33:04,240 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
 INFO 2018-08-19 18:33:04,250 basehttp 124 "GET /usernames/qwerty/count/ HTTP/1.1" 200 32
 INFO 2018-08-19 18:33:04,268 basehttp 124 "GET /mobiles/13123456789/count/ HTTP/1.1" 200 34
 INFO 2018-08-19 18:33:04,358 basehttp 124 "POST /users/ HTTP/1.1" 201 51
+WARNING 2018-08-21 15:06:21,725 base 152 Not Found: /
+WARNING 2018-08-21 15:06:21,729 basehttp 124 "GET / HTTP/1.1" 404 2655
+WARNING 2018-08-21 15:06:21,799 base 152 Not Found: /favicon.ico
+WARNING 2018-08-21 15:06:21,812 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2706
+INFO 2018-08-21 15:06:26,767 basehttp 124 "GET /users HTTP/1.1" 301 0
+INFO 2018-08-21 15:06:26,918 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:26,919 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+WARNING 2018-08-21 15:06:26,922 basehttp 124 "GET /users/ HTTP/1.1" 405 8411
+INFO 2018-08-21 15:06:26,925 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:26,939 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:26,951 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:26,964 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:26,974 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:26,986 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:26,994 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:26,999 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2018-08-21 15:06:27,337 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2018-08-21 16:09:33,946 base 152 Not Found: /
+WARNING 2018-08-21 16:09:33,950 basehttp 124 "GET / HTTP/1.1" 404 2819
+WARNING 2018-08-21 16:09:38,633 base 152 Not Found: /user
+WARNING 2018-08-21 16:09:38,634 basehttp 124 "GET /user HTTP/1.1" 404 2849
+WARNING 2018-08-21 16:09:45,640 base 152 Not Found: /user
+WARNING 2018-08-21 16:09:45,642 basehttp 124 "GET /user HTTP/1.1" 404 2849
+INFO 2018-08-21 16:09:53,455 basehttp 124 "GET /users HTTP/1.1" 301 0
+WARNING 2018-08-21 16:09:53,513 basehttp 124 "GET /users/ HTTP/1.1" 405 8411
+WARNING 2018-08-21 16:11:10,759 base 152 Not Found: /au
+WARNING 2018-08-21 16:11:10,775 basehttp 124 "GET /au HTTP/1.1" 404 2843
+INFO 2018-08-21 16:11:44,669 basehttp 124 "GET /authorizations HTTP/1.1" 301 0
+WARNING 2018-08-21 16:11:44,715 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 7589
+WARNING 2018-08-21 16:12:04,315 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7631
+WARNING 2018-08-21 16:14:30,317 basehttp 124 "GET /users/ HTTP/1.1" 405 8411
+WARNING 2018-08-21 16:14:36,177 base 152 Not Found: /
+WARNING 2018-08-21 16:14:36,178 basehttp 124 "GET / HTTP/1.1" 404 2820
+INFO 2018-08-21 16:14:45,599 basehttp 124 "GET /sms_code/17695566006 HTTP/1.1" 301 0
+INFO 2018-08-21 16:14:45,704 basehttp 124 "GET /sms_code/17695566006/ HTTP/1.1" 200 5170
+WARNING 2018-08-21 16:15:56,632 basehttp 124 "POST /users/ HTTP/1.1" 400 8740
+INFO 2018-08-21 16:16:57,444 basehttp 124 "GET /sms_code/17695566006/ HTTP/1.1" 200 5170
+ERROR 2018-08-21 16:17:09,439 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/serializers.py", line 110, in create
+    jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/settings.py", line 216, in __getattr__
+    raise AttributeError("Invalid API setting: '%s'" % attr)
+AttributeError: Invalid API setting: 'JWT_PAYLOAD_HANDLER'
+ERROR 2018-08-21 16:17:09,553 basehttp 124 "POST /users/ HTTP/1.1" 500 121032
+INFO 2018-08-21 16:21:26,847 basehttp 124 "GET /sms_code/17695566006/ HTTP/1.1" 200 5170
+INFO 2018-08-21 16:21:26,890 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,893 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,906 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,920 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,929 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,930 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,938 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,943 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,947 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2018-08-21 16:21:26,954 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+WARNING 2018-08-21 16:21:43,076 basehttp 124 "POST /users/ HTTP/1.1" 400 8544
+WARNING 2018-08-21 16:22:11,190 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 7589
+INFO 2018-08-21 16:22:21,394 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7704
+WARNING 2018-08-21 16:22:34,429 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+WARNING 2018-08-21 16:23:00,168 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+WARNING 2018-08-21 16:23:51,779 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+WARNING 2018-08-21 16:26:30,522 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+WARNING 2018-08-21 16:28:57,612 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 7589
+WARNING 2018-08-21 16:29:13,736 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+INFO 2018-08-21 16:29:34,648 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7704
+WARNING 2018-08-21 16:31:53,490 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+INFO 2018-08-21 16:32:07,639 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7704
+WARNING 2018-08-21 16:33:18,140 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+INFO 2018-08-21 16:33:28,388 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7778
+WARNING 2018-08-21 16:33:43,078 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+WARNING 2018-08-21 16:34:25,342 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
+INFO 2018-08-21 16:36:00,964 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7778

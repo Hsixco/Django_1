@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import User
 import re
 from django_redis import get_redis_connection
+from rest_framework.settings import api_settings
 
 
 class UserCreateSerializer(serializers.Serializer):
@@ -104,4 +105,11 @@ class UserCreateSerializer(serializers.Serializer):
         # 将获取到的内容添加到数据库
         user.save()
         # 返回数据
+
+        # jwt新增代码 添加jwt验证
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+        payload = jwt_payload_handler(user)
+        token = jwt_encode_handler(payload)
+        user.token = token
         return user
