@@ -468,3 +468,67 @@ INFO 2018-08-21 16:33:28,388 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7
 WARNING 2018-08-21 16:33:43,078 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
 WARNING 2018-08-21 16:34:25,342 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7639
 INFO 2018-08-21 16:36:00,964 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7778
+WARNING 2018-08-24 14:49:51,897 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:49:51,902 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:49:54,086 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:49:54,087 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:49:54,826 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:49:54,828 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:49:55,673 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:49:55,675 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:49:55,893 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:49:55,897 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:49:56,076 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:49:56,077 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:50:05,132 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:50:05,135 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:51:09,349 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:51:09,351 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:51:17,484 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:51:17,487 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:51:19,306 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:51:19,308 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+WARNING 2018-08-24 14:52:34,132 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-08-24 14:52:34,133 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3238
+INFO 2018-08-24 14:54:37,231 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 14:54:52,998 basehttp 124 "GET /oauth/qq/user/?code=772A8EA9D730AE5D09BF62B69D7275D1 HTTP/1.1" 200 190
+INFO 2018-08-24 14:55:39,687 basehttp 124 "GET /sms_code/17695566006/ HTTP/1.1" 200 16
+INFO 2018-08-24 14:55:49,310 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-08-24 14:55:49,320 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/oauth/views.py", line 76, in post
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/oauth/serializers.py", line 49, in validate
+    redis_conn = get_redis_connection('verify_codes')
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django_redis/__init__.py", line 14, in get_redis_connection
+    cache = caches[alias]
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/cache/__init__.py", line 77, in __getitem__
+    "Could not find config for '%s' in settings.CACHES" % alias
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find config for 'verify_codes' in settings.CACHES
+ERROR 2018-08-24 14:55:49,412 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 500 19123
+ERROR 2018-08-24 14:56:47,284 utils 74 code=None msg=None
+ERROR 2018-08-24 14:56:47,285 basehttp 124 "GET /oauth/qq/user/?code=772A8EA9D730AE5D09BF62B69D7275D1 HTTP/1.1" 503 28
+INFO 2018-08-24 14:56:54,466 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 14:57:05,202 basehttp 124 "GET /oauth/qq/user/?code=1B41E4CBBF590D6E19D6B41488AF3C0E HTTP/1.1" 200 190
+INFO 2018-08-24 14:57:31,097 basehttp 124 "GET /sms_code/18639183676/ HTTP/1.1" 200 16
+INFO 2018-08-24 14:57:41,427 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 218
