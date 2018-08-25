@@ -532,3 +532,867 @@ INFO 2018-08-24 14:56:54,466 basehttp 124 "GET /oauth/qq/authorization/?next=/ H
 INFO 2018-08-24 14:57:05,202 basehttp 124 "GET /oauth/qq/user/?code=1B41E4CBBF590D6E19D6B41488AF3C0E HTTP/1.1" 200 190
 INFO 2018-08-24 14:57:31,097 basehttp 124 "GET /sms_code/18639183676/ HTTP/1.1" 200 16
 INFO 2018-08-24 14:57:41,427 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 218
+INFO 2018-08-24 16:39:19,376 basehttp 124 "GET /usernames/hideto/count/ HTTP/1.1" 200 32
+INFO 2018-08-24 16:39:30,535 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+INFO 2018-08-24 16:40:02,295 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+INFO 2018-08-24 16:40:02,345 basehttp 124 "GET /sms_code/17695566006/ HTTP/1.1" 200 16
+WARNING 2018-08-24 16:40:12,292 basehttp 124 "GET /sms_code/17695566006/ HTTP/1.1" 400 37
+INFO 2018-08-24 16:40:12,302 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+INFO 2018-08-24 16:40:29,373 basehttp 124 "GET /usernames/hideto/count/ HTTP/1.1" 200 32
+INFO 2018-08-24 16:40:29,383 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+INFO 2018-08-24 16:40:29,393 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-24 16:40:41,432 basehttp 124 "GET /usernames/hideto/count/ HTTP/1.1" 200 32
+INFO 2018-08-24 16:40:41,437 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-24 16:40:41,441 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+INFO 2018-08-24 16:41:10,752 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 200 32
+INFO 2018-08-24 16:41:26,156 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+INFO 2018-08-24 16:41:34,318 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+INFO 2018-08-24 16:41:35,598 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+INFO 2018-08-24 16:41:35,613 basehttp 124 "GET /sms_code/17695566006/ HTTP/1.1" 200 16
+INFO 2018-08-24 16:41:47,209 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-08-24 16:41:47,221 basehttp 124 "GET /usernames/uchida/count/ HTTP/1.1" 200 32
+INFO 2018-08-24 16:41:47,225 basehttp 124 "GET /mobiles/17695566006/count/ HTTP/1.1" 200 34
+WARNING 2018-08-24 16:41:52,785 basehttp 124 "GET /users/ HTTP/1.1" 405 8411
+INFO 2018-08-24 16:41:52,820 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,823 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,830 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,830 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,832 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,832 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,837 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,844 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,854 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,855 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2018-08-24 16:41:52,908 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2018-08-24 16:41:53,101 base 152 Not Found: /favicon.ico
+WARNING 2018-08-24 16:41:53,102 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 3134
+ERROR 2018-08-24 16:42:33,956 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/serializers.py", line 110, in create
+    jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/settings.py", line 216, in __getattr__
+    raise AttributeError("Invalid API setting: '%s'" % attr)
+AttributeError: Invalid API setting: 'JWT_PAYLOAD_HANDLER'
+ERROR 2018-08-24 16:42:34,060 basehttp 124 "POST /users/ HTTP/1.1" 500 123285
+INFO 2018-08-24 16:46:01,308 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 16:46:03,386 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 16:49:22,170 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 16:49:34,355 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 16:49:47,021 basehttp 124 "GET /oauth/qq/user/?code=EA789327645DA7492984217C2B0F2212 HTTP/1.1" 200 190
+INFO 2018-08-24 16:50:00,174 basehttp 124 "GET /sms_code/17695566006/ HTTP/1.1" 200 16
+INFO 2018-08-24 16:50:28,868 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+INFO 2018-08-24 16:50:29,150 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 207
+INFO 2018-08-24 16:50:40,274 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-08-24 16:50:40,333 base 152 Not Found: /user/
+WARNING 2018-08-24 16:50:40,334 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+WARNING 2018-08-24 16:50:43,394 base 152 Not Found: /user/
+WARNING 2018-08-24 16:50:43,395 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+WARNING 2018-08-24 16:51:03,738 base 152 Not Found: /user/
+WARNING 2018-08-24 16:51:03,738 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+WARNING 2018-08-24 16:51:05,731 base 152 Not Found: /user/
+WARNING 2018-08-24 16:51:05,732 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+WARNING 2018-08-24 16:51:09,472 base 152 Not Found: /user/
+WARNING 2018-08-24 16:51:09,472 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+INFO 2018-08-24 16:51:51,455 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-08-24 16:51:51,514 base 152 Not Found: /user/
+WARNING 2018-08-24 16:51:51,514 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+INFO 2018-08-24 16:52:47,942 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 16:53:03,113 basehttp 124 "GET /oauth/qq/user/?code=E1CF17D3CBE0F684D6268BFF430374B1 HTTP/1.1" 200 207
+WARNING 2018-08-24 16:53:07,701 base 152 Not Found: /user/
+WARNING 2018-08-24 16:53:07,702 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+WARNING 2018-08-24 16:53:09,519 base 152 Not Found: /user/
+WARNING 2018-08-24 16:53:09,520 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+WARNING 2018-08-24 16:53:11,799 base 152 Not Found: /areas/
+WARNING 2018-08-24 16:53:11,802 basehttp 124 "GET /areas/ HTTP/1.1" 404 3119
+INFO 2018-08-24 16:53:11,803 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-08-24 16:53:11,839 base 152 Not Found: /addresses/
+WARNING 2018-08-24 16:53:11,839 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3131
+WARNING 2018-08-24 16:53:18,973 base 152 Not Found: /user/
+WARNING 2018-08-24 16:53:18,974 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+WARNING 2018-08-24 16:53:21,190 base 152 Not Found: /user/
+WARNING 2018-08-24 16:53:21,191 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+INFO 2018-08-24 16:53:31,426 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+ERROR 2018-08-24 16:53:31,459 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/serializers.py", line 134, in update
+    email = validated_data['email']
+KeyError: 'email'
+ERROR 2018-08-24 16:53:31,520 basehttp 124 "PUT /emails/ HTTP/1.1" 500 18832
+WARNING 2018-08-24 16:55:25,435 base 152 Not Found: /user/
+WARNING 2018-08-24 16:55:25,438 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+WARNING 2018-08-24 16:55:27,168 base 152 Not Found: /user/
+WARNING 2018-08-24 16:55:27,168 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+INFO 2018-08-24 16:55:30,180 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 16:55:39,927 basehttp 124 "GET /oauth/qq/user/?code=FC668930AB8964BC73ABDA9F508D3E4A HTTP/1.1" 200 207
+WARNING 2018-08-24 16:55:42,087 base 152 Not Found: /user/
+WARNING 2018-08-24 16:55:42,089 basehttp 124 "GET /user/ HTTP/1.1" 404 3116
+INFO 2018-08-24 16:56:29,095 basehttp 124 "GET /user/ HTTP/1.1" 200 83
+INFO 2018-08-24 16:56:29,117 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-24 16:56:29,133 base 152 Not Found: /browse_histories/
+WARNING 2018-08-24 16:56:29,135 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3307
+ERROR 2018-08-24 16:56:47,084 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/serializers.py", line 134, in update
+    instance.email = validated_data['email']
+KeyError: 'email'
+ERROR 2018-08-24 16:56:47,117 basehttp 124 "PUT /emails/ HTTP/1.1" 500 18841
+ERROR 2018-08-24 16:57:54,083 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/serializers.py", line 135, in update
+    email = validated_data['email']
+KeyError: 'email'
+ERROR 2018-08-24 16:57:54,107 basehttp 124 "PUT /emails/ HTTP/1.1" 500 18832
+ERROR 2018-08-24 16:58:19,276 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 69, in update
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1054, in get_fields
+    fields[field_name] = field_class(**field_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 797, in __init__
+    super(EmailField, self).__init__(**kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'require'
+ERROR 2018-08-24 16:58:19,308 basehttp 124 "PUT /emails/ HTTP/1.1" 500 20099
+ERROR 2018-08-24 16:59:42,755 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 69, in update
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1054, in get_fields
+    fields[field_name] = field_class(**field_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 797, in __init__
+    super(EmailField, self).__init__(**kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'require'
+ERROR 2018-08-24 16:59:42,785 basehttp 124 "PUT /emails/ HTTP/1.1" 500 20099
+INFO 2018-08-24 17:03:38,783 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-08-24 17:03:38,849 basehttp 124 "PUT /emails/ HTTP/1.1" 200 37
+INFO 2018-08-24 19:17:19,624 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 19:17:22,503 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 19:17:44,392 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 19:17:47,704 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-08-24 19:17:47,741 exceptions 25 [<users.views.UserDetailView object at 0x7f8fc67a1f28>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-24 19:17:47,741 basehttp 124 "GET /user/ HTTP/1.1" 507 35
+INFO 2018-08-24 19:17:51,934 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-08-24 19:18:06,226 exceptions 25 [<oauth.views.QQAuthUserView object at 0x7f8fc67a7f28>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-24 19:18:06,229 basehttp 124 "GET /oauth/qq/user/?code=3798996DBF2597E376D168B370000150 HTTP/1.1" 507 35
+INFO 2018-08-24 19:18:41,534 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 19:18:51,472 basehttp 124 "GET /oauth/qq/user/?code=A280883D5F15DD30B9B9E53422FAEF44 HTTP/1.1" 200 231
+INFO 2018-08-24 19:18:54,154 basehttp 124 "GET /user/ HTTP/1.1" 200 101
+INFO 2018-08-24 19:18:54,227 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-24 19:18:54,240 base 152 Not Found: /browse_histories/
+WARNING 2018-08-24 19:18:54,241 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-08-24 19:18:56,121 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-08-24 19:18:56,211 basehttp 124 "PUT /emails/ HTTP/1.1" 200 37
+WARNING 2018-08-24 19:27:52,978 base 152 Not Found: /
+WARNING 2018-08-24 19:27:52,979 basehttp 124 "GET / HTTP/1.1" 404 3403
+WARNING 2018-08-24 19:27:53,074 base 152 Not Found: /favicon.ico
+WARNING 2018-08-24 19:27:53,087 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 3454
+INFO 2018-08-24 19:28:02,939 basehttp 124 "GET /emails HTTP/1.1" 301 0
+WARNING 2018-08-24 19:28:02,994 basehttp 124 "GET /emails/ HTTP/1.1" 401 3664
+INFO 2018-08-24 19:28:03,002 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,003 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,007 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,009 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,024 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,025 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,026 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,027 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,028 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,031 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2018-08-24 19:28:03,262 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2018-08-24 19:28:22,189 base 152 Not Found: /oauth
+WARNING 2018-08-24 19:28:22,190 basehttp 124 "GET /oauth HTTP/1.1" 404 3436
+WARNING 2018-08-24 19:28:27,156 base 152 Not Found: /oauth/
+WARNING 2018-08-24 19:28:27,157 basehttp 124 "GET /oauth/ HTTP/1.1" 404 3669
+WARNING 2018-08-24 19:28:32,322 base 152 Not Found: /oauth/qq
+WARNING 2018-08-24 19:28:32,326 basehttp 124 "GET /oauth/qq HTTP/1.1" 404 3675
+INFO 2018-08-24 19:36:56,134 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-08-24 19:36:56,216 exceptions 25 [<users.views.UserDetailView object at 0x7efedbb9ca58>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-24 19:36:56,216 basehttp 124 "GET /user/ HTTP/1.1" 507 35
+ERROR 2018-08-24 19:36:58,486 exceptions 25 [<users.views.UserDetailView object at 0x7efeda0a00b8>] (1146, "Table 'meiduo_demo.tb_users' doesn't exist")
+ERROR 2018-08-24 19:36:58,486 basehttp 124 "GET /user/ HTTP/1.1" 507 35
+ERROR 2018-08-24 19:37:28,102 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1045, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1190, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1302, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `e_mail` is not valid for model `User`.
+ERROR 2018-08-24 19:37:28,185 basehttp 124 "GET /user/ HTTP/1.1" 500 20098
+ERROR 2018-08-24 19:37:29,646 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1045, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1190, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1302, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `e_mail` is not valid for model `User`.
+ERROR 2018-08-24 19:37:29,694 basehttp 124 "GET /user/ HTTP/1.1" 500 20098
+INFO 2018-08-24 19:37:32,543 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 19:37:46,690 basehttp 124 "GET /oauth/qq/user/?code=0B4633A8AC5C728FD956FCAAAA51617E HTTP/1.1" 200 231
+ERROR 2018-08-24 19:37:49,232 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1045, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1190, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1302, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `e_mail` is not valid for model `User`.
+ERROR 2018-08-24 19:37:49,271 basehttp 124 "GET /user/ HTTP/1.1" 500 20069
+ERROR 2018-08-24 19:37:50,679 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1045, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1190, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1302, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `e_mail` is not valid for model `User`.
+ERROR 2018-08-24 19:37:50,718 basehttp 124 "GET /user/ HTTP/1.1" 500 20102
+INFO 2018-08-24 19:39:20,196 basehttp 124 "GET /user/ HTTP/1.1" 200 101
+INFO 2018-08-24 19:39:20,205 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-24 19:39:20,217 base 152 Not Found: /browse_histories/
+WARNING 2018-08-24 19:39:20,218 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-08-24 19:39:21,844 basehttp 124 "GET /user/ HTTP/1.1" 200 101
+WARNING 2018-08-24 19:39:21,984 base 152 Not Found: /browse_histories/
+WARNING 2018-08-24 19:39:21,985 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-08-24 19:39:22,481 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-08-24 19:39:22,575 basehttp 124 "PUT /emails/ HTTP/1.1" 200 37
+WARNING 2018-08-24 19:53:37,071 base 152 Not Found: /
+WARNING 2018-08-24 19:53:37,095 basehttp 124 "GET / HTTP/1.1" 404 3403
+WARNING 2018-08-24 19:53:37,249 base 152 Not Found: /favicon.ico
+WARNING 2018-08-24 19:53:37,260 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 3454
+INFO 2018-08-24 19:54:14,303 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 19:54:16,236 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 19:54:26,229 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 20:03:27,981 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 20:03:38,968 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 20:03:45,244 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 20:03:49,204 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 20:03:49,731 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-24 20:03:56,672 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-08-24 20:03:56,776 basehttp 124 "GET /user/ HTTP/1.1" 200 101
+INFO 2018-08-24 20:03:56,797 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-24 20:03:56,801 base 152 Not Found: /browse_histories/
+WARNING 2018-08-24 20:03:56,805 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-08-24 20:03:58,008 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-08-24 20:03:58,115 basehttp 124 "PUT /emails/ HTTP/1.1" 200 37
+INFO 2018-08-24 20:04:02,793 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1MzUxMTIyMzgsImFsZyI6IkhTMjU2IiwiZXhwIjoxNTM1MTk4NjM4fQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImhvdWppZTk1QGdtYWlsLmNvbSJ9.k1Hgt0u4jWPZxsgruIoo-0PTFFD_yhLkWY29en9ZP4k HTTP/1.1" 200 16
+INFO 2018-08-24 20:04:11,877 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-08-24 20:04:11,975 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-24 20:04:12,003 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-24 20:04:12,013 base 152 Not Found: /browse_histories/
+WARNING 2018-08-24 20:04:12,016 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+WARNING 2018-08-25 15:03:08,624 base 152 Not Found: /
+WARNING 2018-08-25 15:03:08,634 basehttp 124 "GET / HTTP/1.1" 404 3403
+WARNING 2018-08-25 15:03:08,773 base 152 Not Found: /favicon.ico
+WARNING 2018-08-25 15:03:08,781 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 3454
+INFO 2018-08-25 15:03:35,639 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-25 15:03:39,009 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-25 15:03:44,946 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-25 15:03:54,226 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-25 15:04:09,074 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-08-25 15:04:09,247 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-25 15:04:09,259 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-25 15:04:09,262 base 152 Not Found: /browse_histories/
+WARNING 2018-08-25 15:04:09,262 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-08-25 15:04:11,565 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-08-25 15:04:11,580 base 152 Not Found: /areas/
+WARNING 2018-08-25 15:04:11,592 basehttp 124 "GET /areas/ HTTP/1.1" 404 3445
+WARNING 2018-08-25 15:04:11,608 base 152 Not Found: /addresses/
+WARNING 2018-08-25 15:04:11,610 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3457
+INFO 2018-08-25 15:04:15,660 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+WARNING 2018-08-25 15:04:15,670 base 152 Not Found: /browse_histories/
+WARNING 2018-08-25 15:04:15,684 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-08-25 15:04:17,191 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+WARNING 2018-08-25 15:04:17,204 base 152 Not Found: /browse_histories/
+WARNING 2018-08-25 15:04:17,206 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3478
+INFO 2018-08-25 16:08:41,470 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-08-25 16:08:41,562 base 152 Not Found: /addresses/
+WARNING 2018-08-25 16:08:41,565 basehttp 124 "GET /addresses/ HTTP/1.1" 404 6707
+ERROR 2018-08-25 16:08:41,565 exception 135 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 47, in list
+    serializer = self.get_serializer(queryset, many=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 110, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 127, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'AreasViewSet' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+ERROR 2018-08-25 16:08:41,653 basehttp 124 "GET /areas/ HTTP/1.1" 500 18625
+WARNING 2018-08-25 16:10:59,385 base 152 Not Found: /addresses/
+WARNING 2018-08-25 16:10:59,392 basehttp 124 "GET /addresses/ HTTP/1.1" 404 6707
+INFO 2018-08-25 16:10:59,399 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-08-25 16:11:07,787 basehttp 124 "GET /areas/120000/ HTTP/1.1" 200 74
+INFO 2018-08-25 16:11:08,661 basehttp 124 "GET /areas/120100/ HTTP/1.1" 200 572
+WARNING 2018-08-25 16:11:19,210 base 152 Not Found: /addresses/
+WARNING 2018-08-25 16:11:19,212 basehttp 124 "POST /addresses/ HTTP/1.1" 404 6708
+ERROR 2018-08-25 16:11:41,362 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/views.py", line 129, in create
+    return super().create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'is_delete' was included on serializer UserAddressSerializer in the 'exclude' option, but does not match any model field.
+ERROR 2018-08-25 16:11:41,421 basehttp 124 "POST /addresses/ HTTP/1.1" 500 20172
+ERROR 2018-08-25 16:12:08,071 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/views.py", line 129, in create
+    return super().create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'is_delete' was included on serializer UserAddressSerializer in the 'exclude' option, but does not match any model field.
+ERROR 2018-08-25 16:12:08,096 basehttp 124 "POST /addresses/ HTTP/1.1" 500 20172
+INFO 2018-08-25 16:12:10,956 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-08-25 16:12:10,962 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-08-25 16:13:42,606 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-08-25 16:13:42,608 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-08-25 16:13:54,433 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-08-25 16:13:55,307 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+ERROR 2018-08-25 16:14:03,465 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/views.py", line 129, in create
+    return super().create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'is_delete' was included on serializer UserAddressSerializer in the 'exclude' option, but does not match any model field.
+ERROR 2018-08-25 16:14:03,494 basehttp 124 "POST /addresses/ HTTP/1.1" 500 20172
+ERROR 2018-08-25 16:16:57,632 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/views.py", line 132, in create
+    return super().create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'is_delete' was included on serializer UserAddressSerializer in the 'exclude' option, but does not match any model field.
+ERROR 2018-08-25 16:16:57,658 basehttp 124 "POST /addresses/ HTTP/1.1" 500 20172
+ERROR 2018-08-25 16:16:58,817 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/views.py", line 132, in create
+    return super().create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'is_delete' was included on serializer UserAddressSerializer in the 'exclude' option, but does not match any model field.
+ERROR 2018-08-25 16:16:58,832 basehttp 124 "POST /addresses/ HTTP/1.1" 500 20172
+ERROR 2018-08-25 16:16:58,986 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/users/views.py", line 132, in create
+    return super().create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 482, in to_internal_value
+    fields = self._writable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 370, in _writable_fields
+    field for field in self.fields.values() if not field.read_only
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'is_delete' was included on serializer UserAddressSerializer in the 'exclude' option, but does not match any model field.
+ERROR 2018-08-25 16:16:59,005 basehttp 124 "POST /addresses/ HTTP/1.1" 500 20172
+INFO 2018-08-25 16:18:37,543 basehttp 124 "POST /addresses/ HTTP/1.1" 201 221
+INFO 2018-08-25 16:18:39,139 basehttp 124 "OPTIONS /addresses/1/status/ HTTP/1.1" 200 0
+INFO 2018-08-25 16:18:39,161 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 200 16
+INFO 2018-08-25 19:59:00,727 basehttp 124 "GET / HTTP/1.1" 200 5183
+INFO 2018-08-25 19:59:00,778 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,778 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,782 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,801 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,809 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,816 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,834 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,847 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,849 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:00,854 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2018-08-25 19:59:01,082 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2018-08-25 19:59:01,477 base 152 Not Found: /favicon.ico
+WARNING 2018-08-25 19:59:01,488 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6736
