@@ -17,6 +17,13 @@ from rest_framework.viewsets import GenericViewSet
 from . import constants
 from . import serializers
 from .serializers import UserAddressSerializer
+from rest_framework.permissions import IsAuthenticated
+from .serializers import AddUserBrowsingHistorySerializer
+
+from goods.serializers import SKUSerializer
+from django_redis import get_redis_connection
+from goods.models import SKU
+
 
 
 class UsernameCountView(APIView):
@@ -167,3 +174,23 @@ class AddressViewSet(CreateModelMixin, UpdateModelMixin, GenericViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+
+class UserBrowsingHistoryView(CreateAPIView):
+    """
+    用户浏览历史记录
+    """
+    serializer_class = AddUserBrowsingHistorySerializer
+    permission_classes = [IsAuthenticated]
+
+    def get(self,request):
+        user_id = request.user.id
+        redis_cli = get_redis_connection('history')
+        sku_ids = redis_cli.lrange('history_%s' % user_id,0,-1)
+        # 查询
+        sku = []
+        for sku_id in sku_ids:
+            sku.append(SKU.objects.get(pk=sku_id))
+        sku_serilaizer = SKUSerializer(sku,many=True)
+        return Response(sku_serilaizer.data)
+
+
