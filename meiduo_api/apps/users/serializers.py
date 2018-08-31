@@ -229,5 +229,4 @@ class AddUserBrowsingHistorySerializer(serializers.Serializer):
         pl.ltrim("history_%s" % user_id, 0, constants.USER_BROWSING_HISTORY_COUNTS_LIMIT-1)
 
         pl.execute()
-
-        return validated_data
+        return sku_id

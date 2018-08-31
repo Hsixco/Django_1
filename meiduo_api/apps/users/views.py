@@ -13,6 +13,7 @@ from .serializers import EmailSerializer
 from rest_framework.mixins import CreateModelMixin,UpdateModelMixin
 from rest_framework.decorators import action
 from rest_framework.viewsets import GenericViewSet
+from rest_framework_jwt.views import ObtainJSONWebToken
 
 from . import constants
 from . import serializers
@@ -23,6 +24,7 @@ from .serializers import AddUserBrowsingHistorySerializer
 from goods.serializers import SKUSerializer
 from django_redis import get_redis_connection
 from goods.models import SKU
+from carts.utils import merge_cart_cookie2redis
 
 
 
@@ -193,4 +195,16 @@ class UserBrowsingHistoryView(CreateAPIView):
         sku_serilaizer = SKUSerializer(sku,many=True)
         return Response(sku_serilaizer.data)
 
+
+class UserAuthorizeView(ObtainJSONWebToken):
+    def post(self, request, *args, **kwargs):
+        response = super().post(request,*args,**kwargs)
+        # 进行登录验证，
+        if 'user_id' not in response.data:
+            # 登录失败
+            return response
+        # 登录成功，进行合并
+        user_id = response.data.get('user_id')
+        response = merge_cart_cookie2redis(request,response,user_id)
+        return response
 

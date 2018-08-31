@@ -7,6 +7,7 @@ from .models import OAuthQQUser
 from .exceptions import QQAPIError
 from .utils import OAuthQQ
 from .serializers import OAuthQQUserSerializer
+from carts.utils import merge_cart_cookie2redis
 
 class QQAuthURLView(APIView):
     """
@@ -69,6 +70,7 @@ class QQAuthUserView(APIView):
                 'user_id': user.id,
                 'username': user.username
             })
+            response = merge_cart_cookie2redis(request,response,user.id)
             return response
 
     def post(self,request):
@@ -81,4 +83,5 @@ class QQAuthUserView(APIView):
             'user_id': user.id,
             'username': user.username
         })
+        response = merge_cart_cookie2redis(request,response,user.id)
         return response

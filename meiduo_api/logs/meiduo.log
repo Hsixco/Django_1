@@ -4603,3 +4603,1833 @@ INFO 2018-08-28 20:01:06,672 basehttp 124 "GET /user/ HTTP/1.1" 200 100
 INFO 2018-08-28 20:01:06,713 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
 INFO 2018-08-28 20:01:08,140 basehttp 124 "GET /user/ HTTP/1.1" 200 100
 INFO 2018-08-28 20:01:08,184 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
+INFO 2018-08-28 20:24:44,052 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-08-28 20:24:44,386 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2018-08-28 20:24:49,815 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-08-28 20:24:49,906 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-28 20:24:49,984 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
+INFO 2018-08-28 20:25:25,796 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-28 20:25:25,871 base 152 Not Found: /categories/115/
+WARNING 2018-08-28 20:25:25,878 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8443
+WARNING 2018-08-28 20:25:25,875 base 152 Not Found: /cart/
+WARNING 2018-08-28 20:25:25,892 basehttp 124 "GET /cart/ HTTP/1.1" 404 8413
+INFO 2018-08-28 20:25:25,906 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-28 20:25:27,242 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+ERROR 2018-08-28 20:30:31,317 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'sku_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `sku_id` on serializer `AddUserBrowsingHistorySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'sku_id'.
+ERROR 2018-08-28 20:30:31,546 basehttp 124 "POST /browse_histories/ HTTP/1.1" 500 21454
+INFO 2018-08-28 20:31:21,656 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-28 20:31:21,750 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
+INFO 2018-08-28 20:31:23,377 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-28 20:31:23,424 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
+INFO 2018-08-30 16:31:04,949 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:31:05,056 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 16:31:05,062 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+INFO 2018-08-30 16:31:05,190 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 16:31:06,904 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:31:06,939 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 16:31:06,960 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+INFO 2018-08-30 16:31:06,964 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 16:31:14,761 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:31:14,785 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 16:31:14,794 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+INFO 2018-08-30 16:31:14,929 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 16:31:22,014 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:31:22,619 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 16:31:22,621 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+WARNING 2018-08-30 16:31:22,622 basehttp 124 "GET /cart/ HTTP/1.1" 405 45
+INFO 2018-08-30 16:31:22,629 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 16:31:24,899 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:31:25,001 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-08-30 16:31:26,965 basehttp 124 "POST /cart/ HTTP/1.1" 400 46
+WARNING 2018-08-30 16:31:45,230 basehttp 124 "POST /cart/ HTTP/1.1" 400 46
+INFO 2018-08-30 16:31:54,202 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:31:54,212 basehttp 124 "GET /cart/ HTTP/1.1" 405 45
+WARNING 2018-08-30 16:31:56,155 basehttp 124 "GET /cart/ HTTP/1.1" 405 45
+INFO 2018-08-30 16:33:24,344 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:33:24,418 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+WARNING 2018-08-30 16:33:26,227 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+WARNING 2018-08-30 16:33:31,252 basehttp 124 "GET /cart/ HTTP/1.1" 405 45
+WARNING 2018-08-30 16:33:31,278 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 16:33:31,279 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+INFO 2018-08-30 16:33:31,369 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 16:33:34,103 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:33:34,173 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-08-30 16:33:35,622 basehttp 124 "POST /cart/ HTTP/1.1" 400 46
+WARNING 2018-08-30 16:34:24,565 basehttp 124 "POST /cart/ HTTP/1.1" 400 46
+WARNING 2018-08-30 16:34:33,204 basehttp 124 "POST /cart/ HTTP/1.1" 400 46
+ERROR 2018-08-30 16:35:26,858 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 47, in post
+    response.set_cookie('cart', cookie_cart, max_age=constans.CART_COOKIE_EXPIRES)
+AttributeError: module 'rest_framework.response' has no attribute 'set_cookie'
+ERROR 2018-08-30 16:35:26,923 basehttp 124 "POST /cart/ HTTP/1.1" 500 20031
+ERROR 2018-08-30 16:35:27,954 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 47, in post
+    response.set_cookie('cart', cookie_cart, max_age=constans.CART_COOKIE_EXPIRES)
+AttributeError: module 'rest_framework.response' has no attribute 'set_cookie'
+ERROR 2018-08-30 16:35:27,966 basehttp 124 "POST /cart/ HTTP/1.1" 500 20031
+ERROR 2018-08-30 16:35:28,594 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 47, in post
+    response.set_cookie('cart', cookie_cart, max_age=constans.CART_COOKIE_EXPIRES)
+AttributeError: module 'rest_framework.response' has no attribute 'set_cookie'
+ERROR 2018-08-30 16:35:28,628 basehttp 124 "POST /cart/ HTTP/1.1" 500 20031
+ERROR 2018-08-30 16:35:29,656 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 47, in post
+    response.set_cookie('cart', cookie_cart, max_age=constans.CART_COOKIE_EXPIRES)
+AttributeError: module 'rest_framework.response' has no attribute 'set_cookie'
+ERROR 2018-08-30 16:35:29,667 basehttp 124 "POST /cart/ HTTP/1.1" 500 20031
+ERROR 2018-08-30 16:35:30,444 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 47, in post
+    response.set_cookie('cart', cookie_cart, max_age=constans.CART_COOKIE_EXPIRES)
+AttributeError: module 'rest_framework.response' has no attribute 'set_cookie'
+ERROR 2018-08-30 16:35:30,458 basehttp 124 "POST /cart/ HTTP/1.1" 500 20031
+ERROR 2018-08-30 16:38:04,903 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 48, in post
+    response.set_cookie('cart', cookie_cart, max_age=constans.CART_COOKIE_EXPIRES)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/http/response.py", line 188, in set_cookie
+    self.cookies[key] = value
+AttributeError: 'str' object has no attribute 'cookies'
+ERROR 2018-08-30 16:38:04,946 basehttp 124 "POST /cart/ HTTP/1.1" 500 20137
+ERROR 2018-08-30 16:38:05,586 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 48, in post
+    response.set_cookie('cart', cookie_cart, max_age=constans.CART_COOKIE_EXPIRES)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/http/response.py", line 188, in set_cookie
+    self.cookies[key] = value
+AttributeError: 'str' object has no attribute 'cookies'
+ERROR 2018-08-30 16:38:05,598 basehttp 124 "POST /cart/ HTTP/1.1" 500 20137
+INFO 2018-08-30 16:48:27,011 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 16:48:27,105 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-08-30 16:48:27,164 basehttp 124 "POST /cart/ HTTP/1.1" 500 91804
+ERROR 2018-08-30 16:49:11,031 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-08-30 16:49:11,075 basehttp 124 "POST /cart/ HTTP/1.1" 500 91804
+INFO 2018-08-30 16:49:23,418 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:49:23,754 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-08-30 16:49:27,018 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 16:49:27,168 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-08-30 16:49:27,319 basehttp 124 "POST /cart/ HTTP/1.1" 500 92065
+INFO 2018-08-30 16:51:02,568 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 16:51:02,898 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-08-30 16:52:31,541 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-08-30 16:52:31,695 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-08-30 16:52:47,326 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-08-30 16:52:48,775 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+ERROR 2018-08-30 16:53:35,621 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 39, in post
+    cart_dict = sw_json.loads(cart)
+  File "/home/python/Desktop/Django_1/meiduo_api/utils/sw_json.py", line 20, in loads
+    cart_bytes = base64.b16decode(cart_64)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/base64.py", line 275, in b16decode
+    raise binascii.Error('Non-base16 digit found')
+binascii.Error: Non-base16 digit found
+ERROR 2018-08-30 16:53:35,689 basehttp 124 "POST /cart/ HTTP/1.1" 500 20297
+WARNING 2018-08-30 16:54:12,001 basehttp 124 "GET /cart/ HTTP/1.1" 405 45
+WARNING 2018-08-30 16:54:12,014 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 16:54:12,016 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+INFO 2018-08-30 16:54:12,119 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 16:54:13,666 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 1369
+ERROR 2018-08-30 16:54:17,894 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 39, in post
+    cart_dict = sw_json.loads(cart)
+  File "/home/python/Desktop/Django_1/meiduo_api/utils/sw_json.py", line 20, in loads
+    cart_bytes = base64.b16decode(cart_64)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/base64.py", line 275, in b16decode
+    raise binascii.Error('Non-base16 digit found')
+binascii.Error: Non-base16 digit found
+ERROR 2018-08-30 16:54:17,937 basehttp 124 "POST /cart/ HTTP/1.1" 500 20118
+ERROR 2018-08-30 16:54:40,287 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 39, in post
+    cart_dict = sw_json.loads(cart)
+  File "/home/python/Desktop/Django_1/meiduo_api/utils/sw_json.py", line 20, in loads
+    cart_bytes = base64.b16decode(cart_64)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/base64.py", line 275, in b16decode
+    raise binascii.Error('Non-base16 digit found')
+binascii.Error: Non-base16 digit found
+ERROR 2018-08-30 16:54:40,370 basehttp 124 "POST /cart/ HTTP/1.1" 500 20118
+INFO 2018-08-30 16:55:31,245 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 16:55:31,549 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 39, in post
+    cart_dict = sw_json.loads(cart)
+  File "/home/python/Desktop/Django_1/meiduo_api/utils/sw_json.py", line 20, in loads
+    cart_bytes = base64.b16decode(cart_64)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/base64.py", line 275, in b16decode
+    raise binascii.Error('Non-base16 digit found')
+binascii.Error: Non-base16 digit found
+ERROR 2018-08-30 16:55:31,618 basehttp 124 "POST /cart/ HTTP/1.1" 500 20175
+INFO 2018-08-30 16:55:58,471 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 16:55:59,307 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-08-30 17:03:13,121 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+WARNING 2018-08-30 17:03:17,076 basehttp 124 "GET /cart/ HTTP/1.1" 405 45
+WARNING 2018-08-30 17:03:19,359 basehttp 124 "GET /cart/ HTTP/1.1" 405 45
+INFO 2018-08-30 17:35:25,332 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 17:35:25,522 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 83, in get
+    return Response(serializers.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1002, in get_fields
+    serializer_class=self.__class__.__name__
+AssertionError: Class CartSKUSerializer missing "Meta.model" attribute
+ERROR 2018-08-30 17:35:25,596 basehttp 124 "GET /cart/ HTTP/1.1" 500 21642
+ERROR 2018-08-30 17:35:54,273 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 83, in get
+    return Response(serializers.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 1097, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the CartSKUSerializer serializer.",)
+ERROR 2018-08-30 17:35:54,348 basehttp 124 "GET /cart/ HTTP/1.1" 500 22211
+INFO 2018-08-30 17:36:28,167 basehttp 124 "GET /cart/ HTTP/1.1" 200 322
+WARNING 2018-08-30 17:36:39,032 basehttp 124 "PUT /cart/ HTTP/1.1" 405 45
+WARNING 2018-08-30 17:36:41,655 basehttp 124 "PUT /cart/ HTTP/1.1" 405 45
+INFO 2018-08-30 17:36:45,010 basehttp 124 "GET /cart/ HTTP/1.1" 200 322
+INFO 2018-08-30 17:37:14,643 basehttp 124 "GET /cart/ HTTP/1.1" 200 322
+INFO 2018-08-30 17:40:21,604 basehttp 124 "GET /cart/ HTTP/1.1" 200 322
+WARNING 2018-08-30 17:40:25,110 basehttp 124 "PUT /cart/ HTTP/1.1" 405 45
+INFO 2018-08-30 17:40:28,668 basehttp 124 "GET /cart/ HTTP/1.1" 200 322
+INFO 2018-08-30 17:41:57,131 basehttp 124 "GET /cart/ HTTP/1.1" 200 322
+INFO 2018-08-30 17:42:53,217 basehttp 124 "GET /cart/ HTTP/1.1" 200 322
+INFO 2018-08-30 17:43:26,595 basehttp 124 "GET /cart/ HTTP/1.1" 200 322
+INFO 2018-08-30 17:44:03,173 basehttp 124 "GET /cart/ HTTP/1.1" 200 504
+WARNING 2018-08-30 17:44:05,013 basehttp 124 "PUT /cart/ HTTP/1.1" 405 45
+INFO 2018-08-30 17:44:34,772 basehttp 124 "GET /cart/ HTTP/1.1" 200 504
+INFO 2018-08-30 17:44:40,852 basehttp 124 "GET /cart/ HTTP/1.1" 200 504
+INFO 2018-08-30 17:45:29,401 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 17:45:29,471 basehttp 124 "GET /cart/ HTTP/1.1" 200 498
+INFO 2018-08-30 17:57:32,944 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 17:57:33,069 basehttp 124 "GET /cart/ HTTP/1.1" 200 498
+INFO 2018-08-30 17:57:44,346 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-08-30 17:57:44,415 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-08-30 17:57:58,619 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-08-30 17:58:00,105 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-30 17:58:28,696 basehttp 124 "GET /oauth/qq/user/?code=09CE4CB341D61E3D4E9BBAB18BF5D027 HTTP/1.1" 200 231
+INFO 2018-08-30 17:58:32,849 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-08-30 17:58:32,963 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-30 17:58:32,987 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-08-30 17:58:33,046 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
+ERROR 2018-08-30 17:58:34,465 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 79, in get
+    cart_selected = redis_cli.smermber('cart_selected%s' % user.id)
+AttributeError: 'StrictRedis' object has no attribute 'smermber'
+ERROR 2018-08-30 17:58:34,535 basehttp 124 "GET /cart/ HTTP/1.1" 500 20205
+ERROR 2018-08-30 17:59:07,786 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 79, in get
+    cart_selected = redis_cli.smermbers('cart_selected%s' % user.id)
+AttributeError: 'StrictRedis' object has no attribute 'smermbers'
+ERROR 2018-08-30 17:59:07,816 basehttp 124 "GET /cart/ HTTP/1.1" 500 20241
+ERROR 2018-08-30 17:59:35,676 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 81, in get
+    for sku_id,count in cart_redis.item():
+AttributeError: 'dict' object has no attribute 'item'
+ERROR 2018-08-30 17:59:35,707 basehttp 124 "GET /cart/ HTTP/1.1" 500 20191
+INFO 2018-08-30 17:59:55,920 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+WARNING 2018-08-30 18:00:04,705 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 18:00:04,713 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+INFO 2018-08-30 18:00:04,772 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-30 18:00:04,788 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+ERROR 2018-08-30 18:00:07,614 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'sku_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `sku_id` on serializer `AddUserBrowsingHistorySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'sku_id'.
+ERROR 2018-08-30 18:00:07,974 basehttp 124 "POST /browse_histories/ HTTP/1.1" 500 21634
+INFO 2018-08-30 18:00:10,458 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-08-30 18:00:13,650 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-30 19:24:11,510 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 19:24:11,618 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-30 19:45:57,952 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 19:45:58,180 basehttp 124 "PUT /cart/ HTTP/1.1" 400 74
+INFO 2018-08-30 19:46:10,001 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+WARNING 2018-08-30 19:46:11,849 basehttp 124 "PUT /cart/ HTTP/1.1" 400 74
+INFO 2018-08-30 19:46:16,245 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-30 19:46:30,688 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 19:46:30,730 basehttp 124 "PUT /cart/ HTTP/1.1" 400 74
+INFO 2018-08-30 19:47:33,309 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 19:47:33,456 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-30 19:47:36,119 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 19:47:36,169 basehttp 124 "PUT /cart/ HTTP/1.1" 400 74
+INFO 2018-08-30 19:48:14,171 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 19:48:14,266 basehttp 124 "PUT /cart/ HTTP/1.1" 400 74
+INFO 2018-08-30 19:50:04,779 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 19:50:04,832 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 19:50:04,844 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+INFO 2018-08-30 19:50:04,995 basehttp 124 "GET /cart/ HTTP/1.1" 200 498
+INFO 2018-08-30 19:50:05,000 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 19:50:10,697 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 19:50:12,205 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-08-30 19:50:18,320 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 19:50:18,451 basehttp 124 "GET /cart/ HTTP/1.1" 200 747
+INFO 2018-08-30 19:50:20,707 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 19:50:20,773 basehttp 124 "PUT /cart/ HTTP/1.1" 400 74
+INFO 2018-08-30 19:51:00,355 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 19:51:00,676 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-08-30 19:51:01,206 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 19:51:01,315 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-08-30 19:51:03,545 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 19:51:03,610 basehttp 124 "PUT /cart/ HTTP/1.1" 200 40
+INFO 2018-08-30 19:51:04,563 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 19:51:04,608 basehttp 124 "PUT /cart/ HTTP/1.1" 200 40
+INFO 2018-08-30 20:16:15,613 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 20:16:15,747 basehttp 124 "DELETE /cart/ HTTP/1.1" 400 30
+INFO 2018-08-30 20:16:23,726 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:16:24,022 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:16:24,193 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:18:13,568 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:18:13,771 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:18:13,935 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:19:43,560 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:19:43,657 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:19:43,701 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:24:44,141 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:24:44,272 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:24:44,331 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:25:50,124 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:25:50,206 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:25:50,256 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:28:23,548 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:28:23,630 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:28:23,788 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:30:26,863 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:30:26,922 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 92, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:30:26,992 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:31:23,526 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:31:23,593 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 90, in get
+    print(type(sku_dict),sku_dict)
+UnboundLocalError: local variable 'sku_dict' referenced before assignment
+ERROR 2018-08-30 20:31:23,653 basehttp 124 "GET /cart/ HTTP/1.1" 500 20192
+INFO 2018-08-30 20:32:06,964 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:32:07,085 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 94, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:32:07,184 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:34:45,618 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:34:45,720 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 94, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:34:45,768 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:36:07,682 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:36:07,792 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 95, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:36:07,855 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:37:27,502 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:37:27,575 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 95, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:37:27,634 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:39:37,175 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:39:37,266 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 95, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:39:37,358 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:40:18,399 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:40:18,458 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 95, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:40:18,531 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:42:06,589 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:42:06,656 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 95, in get
+    sku.count = sku_dict.get['count']
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 20:42:06,758 basehttp 124 "GET /cart/ HTTP/1.1" 500 20155
+INFO 2018-08-30 20:43:16,286 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 20:43:16,354 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 95, in get
+    sku.count = sku_dict['count']
+TypeError: tuple indices must be integers or slices, not str
+ERROR 2018-08-30 20:43:16,416 basehttp 124 "GET /cart/ HTTP/1.1" 500 20165
+INFO 2018-08-30 20:43:59,035 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 20:43:59,122 basehttp 124 "GET /cart/ HTTP/1.1" 200 750
+INFO 2018-08-30 21:14:53,866 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 21:14:54,024 basehttp 124 "GET /cart/ HTTP/1.1" 200 750
+INFO 2018-08-30 21:15:03,103 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 21:15:03,192 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 21:15:03,194 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+INFO 2018-08-30 21:15:03,344 basehttp 124 "GET /cart/ HTTP/1.1" 200 750
+INFO 2018-08-30 21:15:03,346 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 21:15:05,688 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 1033
+INFO 2018-08-30 21:15:05,934 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-08-30 21:15:07,268 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 1033
+INFO 2018-08-30 21:15:12,731 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 21:15:12,818 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-08-30 21:15:29,294 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:15:29,427 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 92, in get
+    sku.count = sku_dict[0]['count']
+KeyError: 0
+ERROR 2018-08-30 21:15:29,651 basehttp 124 "GET /cart/ HTTP/1.1" 500 20164
+INFO 2018-08-30 21:16:02,624 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:16:03,145 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 92, in get
+    sku.count = sku_dict.get['count']
+TypeError: 'builtin_function_or_method' object is not subscriptable
+ERROR 2018-08-30 21:16:03,244 basehttp 124 "GET /cart/ HTTP/1.1" 500 20277
+INFO 2018-08-30 21:16:29,717 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:16:29,821 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 92, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:16:29,873 basehttp 124 "GET /cart/ HTTP/1.1" 500 20249
+INFO 2018-08-30 21:17:44,167 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:17:44,260 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:17:44,318 basehttp 124 "GET /cart/ HTTP/1.1" 500 20249
+INFO 2018-08-30 21:18:22,596 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:18:22,705 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict[0]('count')
+KeyError: 0
+ERROR 2018-08-30 21:18:22,797 basehttp 124 "GET /cart/ HTTP/1.1" 500 20164
+INFO 2018-08-30 21:18:46,816 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:18:46,899 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict[0]['count']
+KeyError: 0
+ERROR 2018-08-30 21:18:46,976 basehttp 124 "GET /cart/ HTTP/1.1" 500 20164
+INFO 2018-08-30 21:19:49,836 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:19:49,906 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:19:49,979 basehttp 124 "GET /cart/ HTTP/1.1" 500 20249
+INFO 2018-08-30 21:23:24,517 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:23:24,656 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:23:24,709 basehttp 124 "GET /cart/ HTTP/1.1" 500 20249
+INFO 2018-08-30 21:23:59,585 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 21:23:59,694 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 21:23:59,711 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8598
+ERROR 2018-08-30 21:23:59,787 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+INFO 2018-08-30 21:23:59,823 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+ERROR 2018-08-30 21:23:59,874 basehttp 124 "GET /cart/ HTTP/1.1" 500 20257
+INFO 2018-08-30 21:24:04,510 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 21:24:04,672 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-08-30 21:24:10,194 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:24:10,290 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:24:10,420 basehttp 124 "GET /cart/ HTTP/1.1" 500 20355
+INFO 2018-08-30 21:31:36,888 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:31:37,131 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 91, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:31:37,212 basehttp 124 "GET /cart/ HTTP/1.1" 500 20355
+INFO 2018-08-30 21:31:39,877 basehttp 124 "GET /cart/ HTTP/1.1" 200 9517
+INFO 2018-08-30 21:31:39,937 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:39,937 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:39,937 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:39,938 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:39,939 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:39,956 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:39,969 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:39,979 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:39,990 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:40,006 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2018-08-30 21:31:40,220 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2018-08-30 21:31:40,435 base 152 Not Found: /favicon.ico
+WARNING 2018-08-30 21:31:40,437 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 8586
+INFO 2018-08-30 21:33:59,401 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:33:59,536 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 127, in get
+    sku.count = cart[sku.id]['count']
+TypeError: tuple indices must be integers or slices, not str
+ERROR 2018-08-30 21:33:59,630 basehttp 124 "GET /cart/ HTTP/1.1" 500 20370
+INFO 2018-08-30 21:43:08,797 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:43:08,881 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 73, in get
+    cart_dict = hmjson.loads(cart)
+NameError: name 'hmjson' is not defined
+ERROR 2018-08-30 21:43:08,977 basehttp 124 "GET /cart/ HTTP/1.1" 500 20328
+INFO 2018-08-30 21:43:23,661 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:43:23,918 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 103, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:43:23,988 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 21:46:02,156 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:46:02,260 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 101, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:46:02,326 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 21:46:24,124 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:46:24,205 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 101, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:46:24,284 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 21:53:31,238 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:53:31,458 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 101, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:53:31,537 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 21:54:58,099 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-08-30 21:54:58,216 base 152 Not Found: /categories/115/
+WARNING 2018-08-30 21:54:58,234 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8761
+ERROR 2018-08-30 21:54:58,265 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 101, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+INFO 2018-08-30 21:54:58,284 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+ERROR 2018-08-30 21:54:58,553 basehttp 124 "GET /cart/ HTTP/1.1" 500 20364
+INFO 2018-08-30 21:55:02,384 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 21:55:02,492 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-08-30 21:55:08,138 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 21:55:08,254 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 101, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 21:55:08,320 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 22:00:51,917 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 22:00:52,178 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 102, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 22:00:52,272 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 22:02:34,316 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 22:02:34,444 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 103, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 22:02:34,495 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 22:03:11,887 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 22:03:11,994 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 103, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 22:03:12,032 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 22:04:58,291 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-08-30 22:04:58,374 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 103, in get
+    sku.count = sku_dict.get('count')
+AttributeError: 'tuple' object has no attribute 'get'
+ERROR 2018-08-30 22:04:58,418 basehttp 124 "GET /cart/ HTTP/1.1" 500 20356
+INFO 2018-08-30 22:07:43,609 basehttp 124 "GET / HTTP/1.1" 200 5230
+INFO 2018-08-30 22:07:43,657 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-08-30 22:07:43,659 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-08-30 22:07:43,660 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-08-30 22:07:43,661 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-08-30 22:07:43,671 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-08-30 22:07:43,686 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-08-30 22:07:43,714 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-08-30 22:07:43,724 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-08-30 22:07:43,727 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-08-30 22:07:43,732 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+WARNING 2018-08-30 22:07:43,892 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1739
+INFO 2018-08-30 22:07:43,936 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2018-08-30 22:08:06,909 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 22:08:06,932 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-08-30 22:08:10,865 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-30 22:08:10,968 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2018-08-31 15:47:37,771 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-31 15:47:37,958 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2018-08-31 15:47:46,404 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-31 15:47:59,599 basehttp 124 "GET /oauth/qq/user/?code=F8CDA3BB15D7552967B4A34CB9DF81E1 HTTP/1.1" 200 231
+INFO 2018-08-31 15:48:03,069 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 15:48:16,782 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 15:48:19,492 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 15:48:22,125 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-08-31 15:48:22,222 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-31 15:48:22,233 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-08-31 15:48:22,291 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
+ERROR 2018-08-31 15:48:24,322 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'int' object has no attribute 'sku_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `sku_id` on serializer `AddUserBrowsingHistorySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
+Original exception text was: 'int' object has no attribute 'sku_id'.
+ERROR 2018-08-31 15:48:24,858 basehttp 124 "POST /browse_histories/ HTTP/1.1" 500 21634
+INFO 2018-08-31 15:48:26,330 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-08-31 15:48:30,978 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:48:33,179 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:48:35,555 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:48:36,924 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-31 15:48:36,972 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
+INFO 2018-08-31 15:48:38,713 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:48:40,232 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:48:42,090 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:48:44,715 basehttp 124 "OPTIONS /cart/selection/ HTTP/1.1" 200 0
+INFO 2018-08-31 15:48:44,733 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2018-08-31 15:48:46,173 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:48:48,377 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:48:50,771 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:49:55,010 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:49:56,629 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:49:58,577 basehttp 124 "GET /user/ HTTP/1.1" 200 100
+INFO 2018-08-31 15:49:58,654 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1144
+INFO 2018-08-31 15:50:00,764 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:50:02,884 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:50:08,858 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2018-08-31 15:50:10,810 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:50:12,652 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 15:50:14,643 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 15:50:34,193 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-31 15:50:34,276 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 15:50:39,646 basehttp 124 "POST /cart/ HTTP/1.1" 200 38
+INFO 2018-08-31 15:50:42,762 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2018-08-31 15:50:47,154 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-31 15:50:57,486 basehttp 124 "GET /oauth/qq/user/?code=4C4D05920F0D113088D099D2EBD35FD2 HTTP/1.1" 200 231
+INFO 2018-08-31 15:51:03,571 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:51:05,803 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:51:07,784 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:53:53,714 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:53:55,217 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:53:56,708 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:54:33,362 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:54:37,794 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:54:42,689 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:54:45,641 basehttp 124 "PUT /cart/ HTTP/1.1" 200 40
+INFO 2018-08-31 15:54:47,716 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:54:49,201 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:54:50,899 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:56:04,098 basehttp 124 "GET /skus/search/?text=huawei&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-08-31 15:56:10,099 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-08-31 15:56:18,027 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:56:21,907 basehttp 124 "PUT /cart/ HTTP/1.1" 200 40
+INFO 2018-08-31 15:56:24,009 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:56:25,954 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:56:27,789 basehttp 124 "PUT /cart/ HTTP/1.1" 200 40
+INFO 2018-08-31 15:56:29,388 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:56:32,977 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 15:56:35,100 basehttp 124 "GET /cart/ HTTP/1.1" 200 252
+INFO 2018-08-31 15:56:37,215 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-08-31 15:56:38,634 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:59:48,323 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-08-31 15:59:51,519 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 16:03:20,180 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-31 16:03:20,269 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-08-31 16:03:21,876 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 171, in delete
+    pl.hrem('cart_selected%d', user.id,sku_id)
+AttributeError: 'StrictPipeline' object has no attribute 'hrem'
+ERROR 2018-08-31 16:03:21,945 basehttp 124 "DELETE /cart/ HTTP/1.1" 500 19860
+ERROR 2018-08-31 16:03:23,473 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_cp4/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/Django_1/meiduo_api/apps/carts/views.py", line 171, in delete
+    pl.hrem('cart_selected%d', user.id,sku_id)
+AttributeError: 'StrictPipeline' object has no attribute 'hrem'
+ERROR 2018-08-31 16:03:23,492 basehttp 124 "DELETE /cart/ HTTP/1.1" 500 19860
+INFO 2018-08-31 16:03:37,305 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 16:03:38,892 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:03:41,654 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:03:58,371 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:04:01,739 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-31 16:04:10,031 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2018-08-31 16:04:12,005 basehttp 124 "PUT /cart/ HTTP/1.1" 200 38
+INFO 2018-08-31 16:04:18,134 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-31 16:04:36,109 basehttp 124 "GET /oauth/qq/user/?code=F6BD30D6E53A95E838F3D107CEA8A531 HTTP/1.1" 200 231
+INFO 2018-08-31 16:04:38,942 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:04:40,584 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:17:22,978 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-31 16:17:23,072 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:17:41,989 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2018-08-31 16:17:46,919 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-31 16:21:07,952 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-31 16:21:38,384 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-08-31 16:21:47,429 basehttp 124 "GET /oauth/qq/user/?code=408F7877A14F49D51994E75A12BC3EE4 HTTP/1.1" 200 231
+INFO 2018-08-31 16:21:51,063 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-08-31 16:21:51,105 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:21:53,429 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:21:55,663 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:24:49,140 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-08-31 16:24:57,516 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2018-08-31 16:24:59,824 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-08-31 16:25:01,606 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
