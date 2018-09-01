@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'django_crontab',
     'haystack',
-    'carts.apps.CartsConfig'
+    'carts.apps.CartsConfig',
+    'orders.apps.OrdersConfig'
 
 ]
 

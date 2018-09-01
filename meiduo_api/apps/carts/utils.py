@@ -19,6 +19,7 @@ def merge_cart_cookie2redis(request,response,user_id):
             pl.sadd('cart_selected%d' % user_id,sku_id)
         else:
             pl.srem('cart_selected%d' % user_id,sku_id)
+        pl.execute()
 
     # 删除Cookie
     response.delete_cookie('cart')

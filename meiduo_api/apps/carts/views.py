@@ -168,7 +168,7 @@ class CartView(APIView):
             redis_cli = get_redis_connection('cart')
             pl = redis_cli.pipeline()
             pl.hdel('cart%d' % user.id,sku_id)
-            pl.srem('cart_selected%d', user.id,sku_id)
+            pl.srem('cart_selected%d'% user.id,sku_id)
             pl.execute()
 
         return response
@@ -203,8 +203,8 @@ class CartSelectAllView(APIView):
             redis_cli = get_redis_connection('cart')
             sku_ids = redis_cli.hkeys('cart%d' % user.id)
             if selected:
-                redis_cli.sadd('cart_selected%d' % user.id, *sku_ids)
+                redis_cli.sadd('cart_selected%d' % user.id, sku_ids)
             else:
-                redis_cli.srem('cart_selected%d' % user.id, *sku_ids)
+                redis_cli.srem('cart_selected%d' % user.id, sku_ids)
 
         return response
