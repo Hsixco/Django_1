@@ -66,22 +66,26 @@ class OrderSaveSerializer(serializers.ModelSerializer):
                     raise serializers.ValidationError('库存不足')
 
                 # 3.2修改商品的库存、销量
-                sku.stock -= count
-                sku.sales += count
-                sku.save()
 
+                new_stock = sku.stock - count
+                new_sales = sku.sales + count
+                ret = SKU.objects.filter(id=sku.id, stock=new_stock).update(stock=new_sales, sales=new_sales)
+                if ret == 0:
+                    continue
                 # 3.3修改SPU的总销量
                 goods = sku.goods  # 获取当前sku对应的spu
                 goods.sales += count
                 goods.save()
 
                 # 3.4创建OrderGoods对象
-                order_goods = OrderGoods()
-                order_goods.order = order
-                order_goods.sku = sku
-                order_goods.count = count
-                order_goods.price = sku.price
-                order_goods.save()
+                OrderGoods.objects.create(
+                    order = order,
+                    sku = sku,
+                    count = count,
+                    price = sku.price
+
+                )
+
 
                 # 3.5计算总金额、总数量
                 total_count += count

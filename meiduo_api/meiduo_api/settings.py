@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'django_crontab',
     'haystack',
     'carts.apps.CartsConfig',
-    'orders.apps.OrdersConfig'
+    'orders.apps.OrdersConfig',
+    'payments.apps.PaymentsConfig'
 
 ]
 
@@ -304,3 +305,8 @@ HAYSTACK_CONNECTIONS = {
 
 # 当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+
+ALIPAY_APPID = "2016091700529360"
+ALIPAY_URL = "https://openapi.alipaydev.com/gateway.do"
+ALIPAY_DEBUG = True
